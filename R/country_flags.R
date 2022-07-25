@@ -28,7 +28,7 @@
                                              nomatch = NULL)
 
     validCountries <- unique(species_ECD[[ECDcountry]])
-    validCountries <- countrycode(validCountries, origin =  'iso2c', destination = 'iso3c', nomatch = NULL)
+    validCountries <- countrycode::countrycode(validCountries, origin =  'iso2c', destination = 'iso3c', nomatch = NULL)
     validCountries <- validCountries[validCountries != ""]
     countryFlags <- data[[datCountry]] %in% validCountries
     data$.country = countryFlags

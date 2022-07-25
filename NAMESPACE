@@ -3,4 +3,5 @@
 export(.flag_countries_helper)
 export(flag_countries)
 export(flag_data)
+export(getContinents)
 export(get_records_since_date)
