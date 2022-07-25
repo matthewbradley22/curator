@@ -1,6 +1,6 @@
 
 #' Helper function to flag occurences where species name is not found in continent in the Expert
-#' curated datast
+#' curated dataset
 #'
 #' @param data Dataset with observations
 #' @param ECD Expert curated dataset
@@ -12,8 +12,7 @@
 #' @return dataset with country flags column
 #' @export
 #'
-#' @examples
-#' called by flag_countries function
+#' @examples  flag_countries(data, ECD)
 .flag_countries_helper <- function(data,
                                    ECD,
                                    ECDspecies,
@@ -23,7 +22,7 @@
 
   species_ECD <- ECD[ECD[[ECDspecies]] %in% unique(data[[datSpecies]]),]
   if (dim(species_ECD)[1] != 0) {
-    species_ECD[[ECDcountry]] <- countrycode(species_ECD[[ECDcountry]],
+    species_ECD[[ECDcountry]] <- countrycode::countrycode(species_ECD[[ECDcountry]],
                                              origin =  'iso2c',
                                              destination = 'iso3c',
                                              nomatch = NULL)
