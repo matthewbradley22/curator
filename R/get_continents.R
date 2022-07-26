@@ -8,7 +8,7 @@
 #'
 #' @examples getContinents(data)
 #'
-getContinents <- function(data,
+get_continents <- function(data,
                           country = "countryCode"){
   data_continent <- countrycode::countrycode(sourcevar = data[[country]],
                                 origin = "iso3c",

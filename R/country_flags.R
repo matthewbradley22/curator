@@ -12,7 +12,8 @@
 #' @return dataset with country flags column
 #' @export
 #'
-#' @examples  flag_countries(data, ECD)
+#' @examples
+#' flag_countries(data, ECD)
 .flag_countries_helper <- function(data,
                                    ECD,
                                    ECDspecies,

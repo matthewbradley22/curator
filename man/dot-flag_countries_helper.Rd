@@ -35,5 +35,5 @@ Helper function to flag occurences where species name is not found in continent 
 curated dataset
 }
 \examples{
- flag_countries(data, ECD)
+flag_countries(data, ECD)
 }
