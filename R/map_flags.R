@@ -58,9 +58,11 @@ map_flags <- function(data,
     palette = c("orange", "blue"),
     domain = df$sum)
 
-  leaflet::leaflet(df) %>% leaflet::addCircleMarkers(color = ~pal(flags),
+  map = leaflet::leaflet(df)
+  map = leaflet::addCircleMarkers(map, color = ~pal(flags),
                                    fillOpacity = 1,
                                    label = ~df$flags,
-                                   radius = 3) %>%
-    leaflet::addTiles()
+                                   radius = 3)
+  map = leaflet::addTiles(map)
+  print(map)
 }

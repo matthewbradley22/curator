@@ -51,10 +51,7 @@ You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-da
 You can also embed plots, for example:
 
 ```{r, echo = FALSE}
-dat = get_records_since_date(100)
-flags = flag_data(dat)
-flags$plotNum = flags_for_map(flags)
-map_flags(flags)
+plot(x = 1)
 ```
 
 In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
