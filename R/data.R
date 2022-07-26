@@ -5,8 +5,23 @@
 #'
 #' @format A data frame with 985 rows and 148 variables:
 #' \describe{
-#'   \item{scientific name}{scientific name from gbif
+#'   \item{scientificName}{scientific name from gbif}
 #'   ...
 #' }
 #' @source \url{https://www.gbif.org/occurrence/search}
 "obsData"
+
+
+#' 50,000 observations from expert curated dataset
+#'
+#' A dataset containing biological and location data for 50,000 expert curated observations
+#'
+#' @format A data frame with 985 rows and 148 variables:
+#' \describe{
+#'   \item{scientificNameORpreviousID}{scientific name from gbif}
+#'   ...
+#' }
+#' @source \url{https://www.gbif.org/occurrence/search}
+"ECD"
+
+

@@ -8,7 +8,7 @@ passed through CoordinateCleaner::clean_coordinates}
 \format{
 A data frame with 985 rows and 148 variables:
 \describe{
-\item{scientific name}{scientific name from gbif
+\item{scientificName}{scientific name from gbif}
 ...
 }
 }
