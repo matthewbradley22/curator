@@ -5,9 +5,8 @@
 #'
 #' @format A data frame with 985 rows and 148 variables:
 #' \describe{
-#'   \item{scientific name}{scientific name from gbif}
-#'   \item{carat}{weight of the diamond, in carats}
+#'   \item{scientific name}{scientific name from gbif
 #'   ...
 #' }
-#' @source \url{http://www.diamondse.info/}
+#' @source \url{https://www.gbif.org/occurrence/search}
 "obsData"
