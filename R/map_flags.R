@@ -26,11 +26,12 @@
 flags_for_map <- function(data,
                           pattern = "^\\.",
                           summaryCol = ".summary"){
-  data <- data[, grepl(pattern, names(data))]
-  data <- data[, !names(data) == summaryCol]
-  plotNum <-  apply(data, MARGIN = 1, FUN = .map_helper)
+  dataNew <- data[, grepl(pattern, names(data))]
+  dataNew <- dataNew[, !names(dataNew) == summaryCol]
+  plotNum <-  apply(dataNew, MARGIN = 1, FUN = .map_helper)
+  data$plotNum= plotNum
 
-  return(plotNum)
+  return(data)
 }
 
 
