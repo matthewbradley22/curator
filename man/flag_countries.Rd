@@ -32,6 +32,3 @@ dataset with country flags column
 \description{
 Title
 }
-\examples{
-flag_countries(data, ECD)
-}

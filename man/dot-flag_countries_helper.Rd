@@ -34,6 +34,3 @@ dataset with country flags column
 Helper function to flag occurences where species name is not found in continent in the Expert
 curated dataset
 }
-\examples{
-flag_countries(data, ECD)
-}

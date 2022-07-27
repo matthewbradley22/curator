@@ -34,6 +34,6 @@ change_flagged_names <- function(data,
                                  names = ".name",
                                  species = "species"){
   data <- data[data[[names]] == FALSE,]
-  newNames <- gnr_resolve(sci = data[[species]], canonical = T, best_match_only = T)
+  newNames <- taxize::gnr_resolve(sci = data[[species]], canonical = T, best_match_only = T)
   return(newNames$matched_name2)
 }

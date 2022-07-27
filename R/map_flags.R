@@ -52,9 +52,9 @@ map_flags <- function(data,
                       latitude = "decimalLatitude",
                       plotValues = "plotNum"){
 
-  df <- data.frame(longitude = flags[[longitude]],
-                   latitude = flags[[latitude]],
-                   flags = flags[[plotValues]])
+  df <- data.frame(longitude = data[[longitude]],
+                   latitude = data[[latitude]],
+                   flags = data[[plotValues]])
   pal <- leaflet::colorFactor(
     palette = c("orange", "blue"),
     domain = df$sum)

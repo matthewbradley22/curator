@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' flag_countries(data, ECD)
+#'
 .flag_countries_helper <- function(data,
                                    ECD,
                                    ECDspecies,
@@ -58,7 +58,7 @@
 #' @export
 #'
 #' @examples
-#' flag_countries(data, ECD)
+#'
 flag_countries <- function(data,
                            ECD,
                            datSpecies = "species",
