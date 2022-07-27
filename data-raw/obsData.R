@@ -8,3 +8,8 @@ obsData = CoordinateCleaner::clean_coordinates(x = dat,
                                                lat = "decimalLatitude",
                                                countries = "countryCode",
                                                species = "species")
+
+names = c("species", "scientificName", "decimalLatitude", "decimalLongitude",
+          "countryCode", ".val", ".equ", ".zer",".cap", ".cen" ,   ".sea", ".otl" ,".gbf", ".inst", ".summary" )
+
+obsData = obsData[colnames(obsData) %in% names]
