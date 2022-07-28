@@ -1,0 +1,26 @@
+---
+title: "Introductin to curator"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(curator)
+```
+
+## Overview:
+
+curator was designed to create an easily usable pipeline to pull biological data from the Global Biodiversity Information Facility (gbif), use the already available flagging functions from the CoordinateCleaner package, add new flagging functions focused on using an expert curated dataset, and dynamically mapping the resulting observations and their flags.
+
+
+## Retrieving data:

@@ -23,25 +23,26 @@ devtools::install_github("matthewbradley22/curator")
 
 ## Example
 
-This is a basic example of retriving data from gbif
-(get_records_since_date), flagging it with CoordinateCleaner
-(flag_data), and flagging any species names in the data that do not
-occur in the example ECD provided in the package.
+This is a basic example of retriving data from gbif, flagging it with
+CoordinateCleaner, and flagging any species names in the data that do
+not occur in the example ECD provided in the package.
 
 ``` r
 library(curator)
 
-data = get_records_since_date(numObs = 25)
+#Retrieve data with rgbig::occ_search and pass to CoordinateCleaner::clean_coordinates
+data = get_records_since_date(numObs = 500)
 flags = flag_data(data)
 ```
 
 ``` r
+#Flag names that do not occur in ECD
 flags = flag_names(flags, curator::ECD)
 summary(flags)
 #>     .val     .equ     .zer     .cap     .cen     .sea     .otl     .gbf 
-#>        0        0        0        0        0        4        0        0 
+#>        0        0        0        5        0       35       10        0 
 #>    .inst .summary    .name 
-#>        0        4        0
+#>        0       53        6
 ```
 
 ## Example dynamic map:

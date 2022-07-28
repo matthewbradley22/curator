@@ -9,7 +9,7 @@ get_continents(data, country = "countryCode")
 \arguments{
 \item{data}{dataset with observations}
 
-\item{country}{column name of countries}
+\item{country}{column name of column with country codes}
 }
 \value{
 dataset with new continent column
@@ -18,6 +18,6 @@ dataset with new continent column
 Create a continent column for a dataset with a countryCode column
 }
 \examples{
-get_continents(obsData)
+get_continents(curator::obsData)
 
 }
