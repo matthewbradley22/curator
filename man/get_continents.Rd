@@ -12,7 +12,7 @@ get_continents(data, country = "countryCode")
 \item{country}{column name of column with country codes}
 }
 \value{
-dataset with new continent column
+dataset of same type that was passed to it. One column of continents.
 }
 \description{
 Create a continent column for a dataset with a countryCode column

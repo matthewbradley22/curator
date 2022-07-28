@@ -3,7 +3,7 @@
 #' @param data dataset with observations
 #' @param country column name of column with country codes
 #'
-#' @return dataset with new continent column
+#' @return dataset of same type that was passed to it. One column of continents.
 #' @export
 #'
 #' @examples get_continents(curator::obsData)

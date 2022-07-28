@@ -12,7 +12,7 @@
 #' @param datLongitude longtiude column name in new dataset
 #' @param datLatitude latitude column name in new dataset
 #'
-#' @return
+#' @return dataset of the same class passed to it. New column of distance flags
 #' @export
 #'
 #' @examples
@@ -62,7 +62,7 @@
 #' @param datLatitude latitude column name in new dataset
 #'
 #'
-#' @return
+#' @return dataset of the same class passed to it. New column of distance flags
 #' @export
 #'
 #' @examples

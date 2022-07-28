@@ -40,7 +40,7 @@ Observation is flagged if it is outside convex hull}
 \item{datLat}{Latitude column name in new dataset}
 }
 \value{
-dataset with new column of convex hull flags
+dataset of the same class passed to it. New column of convex hull flags.
 }
 \description{
 Helper function to create a convex hull of a species on a specific continent.

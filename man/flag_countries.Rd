@@ -27,7 +27,7 @@ flag_countries(
 \item{datCountry}{Country column name in dataset with observations}
 }
 \value{
-dataset with country flags column
+dataset of the same class passed to it. New column of country flags
 }
 \description{
 Title

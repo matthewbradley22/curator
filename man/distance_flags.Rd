@@ -38,6 +38,9 @@ distance_flags(
 
 \item{datLatitude}{latitude column name in new dataset}
 }
+\value{
+dataset of the same class passed to it. New column of distance flags
+}
 \description{
 Flags species occurences that are over a certain distance from the center of the species distribution
 }

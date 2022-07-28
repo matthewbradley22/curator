@@ -13,6 +13,9 @@ change_flagged_names(data, names = ".name", species = "species")
 
 \item{species}{species column name in dataset}
 }
+\value{
+dataset of the same class passed to it. Problematic names changed if possible.
+}
 \description{
 Title
 }

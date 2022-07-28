@@ -28,7 +28,7 @@ curated dataset}
 \item{datCountry}{Country column name in dataset with observations}
 }
 \value{
-dataset with country flags column
+dataset of the same class passed to it. New column of country flags
 }
 \description{
 Helper function to flag occurences where species name is not found in continent in the Expert

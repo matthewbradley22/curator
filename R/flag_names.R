@@ -5,7 +5,7 @@
 #' @param datSpecies species column name in new dataset
 #' @param ECDspecies species column name in ECD
 #'
-#' @return
+#' @return dataset of the same class passed to it. New column of name flags
 #' @export
 #'
 #' @examples
@@ -26,7 +26,7 @@ flag_names = function(data,
 #' @param names name of column that indicates which observations need a name change
 #' @param species species column name in dataset
 #'
-#' @return
+#' @return dataset of the same class passed to it. Problematic names changed if possible.
 #' @export
 #'
 #' @examples

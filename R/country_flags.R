@@ -9,7 +9,7 @@
 #' @param ECDcountry Country column name in ECD
 #' @param datCountry Country column name in dataset with observations
 #'
-#' @return dataset with country flags column
+#' @return dataset of the same class passed to it. New column of country flags
 #' @export
 #'
 #' @examples
@@ -44,7 +44,7 @@
   return(data)
 }
 
-#pass flags dataset for data
+
 #' Title
 #'
 #' @param data dataset with observations
@@ -54,7 +54,7 @@
 #' @param ECDcountry Country column name in ECD
 #' @param datCountry Country column name in dataset with observations
 #'
-#' @return dataset with country flags column
+#' @return dataset of the same class passed to it. New column of country flags
 #' @export
 #'
 #' @examples

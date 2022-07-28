@@ -40,7 +40,7 @@ check_convex_hull(
 \item{datLat}{Latitude column name in new dataset}
 }
 \value{
-dataset with new column of convex hull flags
+dataset of the same class passed to it. New column of convex hull flags.
 }
 \description{
 Function to check if observations of specific species are within a convex hull

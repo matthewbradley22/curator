@@ -15,6 +15,9 @@ flag_names(data, ECD, datSpecies = "species", ECDspecies = "species")
 
 \item{ECDspecies}{species column name in ECD}
 }
+\value{
+dataset of the same class passed to it. New column of name flags
+}
 \description{
 Flag species names in the new dataset that do not occur in the ECD
 }

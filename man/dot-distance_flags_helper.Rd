@@ -39,6 +39,9 @@ of their distribution on a given continet}
 
 \item{datLatitude}{latitude column name in new dataset}
 }
+\value{
+dataset of the same class passed to it. New column of distance flags
+}
 \description{
 Helper function to flag species occurences that are over a certain distance from the center
 of their distribution on a given continet

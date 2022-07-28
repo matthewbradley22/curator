@@ -13,7 +13,7 @@
 #' @param datLon Longitude column name in new dataset
 #' @param datLat Latitude column name in new dataset
 #'
-#' @return dataset with new column of convex hull flags
+#' @return dataset of the same class passed to it. New column of convex hull flags.
 #' @export
 #'
 #' @examples
@@ -59,7 +59,7 @@
 #' @param datLon Longitude column name in new dataset
 #' @param datLat Latitude column name in new dataset
 #'
-#' @return dataset with new column of convex hull flags
+#' @return dataset of the same class passed to it. New column of convex hull flags.
 #' @export
 #'
 #' @examples
