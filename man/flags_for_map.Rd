@@ -13,6 +13,13 @@ flags_for_map(data, pattern = "^\\\\.", summaryCol = ".summary")
 
 \item{summaryCol}{column that indicates whether or not an occurence has any flags}
 }
+\value{
+dataframe with new plotNum column used in the curator::map_flags function
+}
 \description{
 function for preparing data to be mapped by map_flags
+}
+\examples{
+flags_for_map(curator::obsData)
+
 }

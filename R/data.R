@@ -32,7 +32,6 @@
 #'
 #' @format A data frame with 985 rows and 148 variables:
 #' \describe{
-#'   \item{scientificNameORpreviousID}{scientific name from gbif}
 #'   \item{species}{Genus and species epithet.}
 #'   \item{decimalLongitude}{Longitude coordinates in decimal degrees}
 #'   \item{decimalLatitude}{Latitude coordinates in decimal degrees}

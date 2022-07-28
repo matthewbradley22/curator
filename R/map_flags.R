@@ -6,6 +6,7 @@
 #' @export
 #'
 #' @examples
+#'
 .map_helper <- function(data){
   flagName <- names(data[which((data) == FALSE)])
   if(length(flagName) == 0) flagName = "No Flag"
@@ -19,10 +20,11 @@
 #' @param pattern pattern to index columns that indicate flags
 #' @param summaryCol column that indicates whether or not an occurence has any flags
 #'
-#' @return
+#' @return dataframe with new plotNum column used in the curator::map_flags function
 #' @export
 #'
-#' @examples
+#' @examples flags_for_map(curator::obsData)
+#'
 flags_for_map <- function(data,
                           pattern = "^\\.",
                           summaryCol = ".summary"){
@@ -47,6 +49,9 @@ flags_for_map <- function(data,
 #' @export
 #'
 #' @examples
+#' data = flags_for_map(obsData)
+#' map_flags(data)
+#'
 map_flags <- function(data,
                       longitude = "decimalLongitude",
                       latitude = "decimalLatitude",

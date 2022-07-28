@@ -16,5 +16,7 @@ returns a dataframe with included flags
 flag data using coordinate_cleaner
 }
 \examples{
-flag_data(data)
+obsData <- data.frame(obsData[1:5])
+flag_data(obsData)
+
 }

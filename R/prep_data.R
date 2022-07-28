@@ -45,7 +45,10 @@ get_records_since_date <- function(startingMonth = 6,
 #' @return returns a dataframe with included flags
 #' @export
 #'
-#' @examples flag_data(data)
+#' @examples
+#' obsData <- data.frame(obsData[1:5])
+#' flag_data(obsData)
+#'
 flag_data <- function(data){
 
   flags <- CoordinateCleaner::clean_coordinates(x = data,

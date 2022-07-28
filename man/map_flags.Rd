@@ -23,3 +23,8 @@ map_flags(
 \description{
 Title
 }
+\examples{
+data = flags_for_map(obsData)
+map_flags(data)
+
+}
