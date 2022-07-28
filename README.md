@@ -31,7 +31,7 @@ library(curator)
 data = get_records_since_date(numObs = 10)
 ```
 
+## Example dynamic map:
+
 <a href="https://matthewbradley22.github.io/curator/curatorExample.html"
 target="_blank">Dynamic map example</a>
-
-<a href="https://matthewbradley22.github.io/curator/curatorExample.html" target="_blank">example</a>
