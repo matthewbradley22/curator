@@ -32,4 +32,4 @@ data = get_records_since_date(numObs = 10)
 ```
 
 [Dynamic map
-example](file:///Users/matthewbradley/Documents/curatorExample.html)
+example](https://matthewbradley22.github.io/curator/curatorExample.html)
