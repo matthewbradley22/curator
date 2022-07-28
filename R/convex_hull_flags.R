@@ -17,6 +17,7 @@
 #' @export
 #'
 #' @examples
+#'
 .check_convex_hull_helper <- function(data,
                                       ECD,
                                       ECDContinent,

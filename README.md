@@ -52,31 +52,8 @@ example workflow can be found here:
 
 You can also embed plots, for example:
 
-    #> Testing coordinate validity
-    #> Flagged 0 records.
-    #> Testing equal lat/lon
-    #> Flagged 0 records.
-    #> Testing zero coordinates
-    #> Flagged 0 records.
-    #> Testing country capitals
-    #> Flagged 5 records.
-    #> Testing country centroids
-    #> Flagged 0 records.
-    #> Testing sea coordinates
-    #> OGR data source with driver: ESRI Shapefile 
-    #> Source: "/private/var/folders/w3/nt2mw8xj72z9mmctnpprhvs80000gn/T/RtmpIZXxql", layer: "ne_50m_land"
-    #> with 1420 features
-    #> It has 3 fields
-    #> Integer64 fields read as strings:  scalerank
-    #> Flagged 35 records.
-    #> Testing geographic outliers
-    #> Flagged 16 records.
-    #> Testing GBIF headquarters, flagging records around Copenhagen
-    #> Flagged 0 records.
-    #> Testing biodiversity institutions
-    #> Flagged 0 records.
-    #> Flagged 49 of 492 records, EQ = 0.1.
-    #> Assuming "longitude" and "latitude" are longitude and latitude, respectively
+<iframe src="file:///Users/matthewbradley/Documents/curatorExample.html" width="100%" height="1080px" data-external="1">
+</iframe>
 
 In that case, don’t forget to commit and push the resulting figure
 files, so they display on GitHub and CRAN.

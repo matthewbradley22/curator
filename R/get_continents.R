@@ -1,7 +1,7 @@
 #' Create a continent column for a dataset with a countryCode column
 #'
 #' @param data dataset with observations
-#' @param country column name of countries
+#' @param country column name of column with country codes
 #'
 #' @return dataset with new continent column
 #' @export
