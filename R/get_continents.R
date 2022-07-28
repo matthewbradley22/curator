@@ -6,7 +6,7 @@
 #' @return dataset with new continent column
 #' @export
 #'
-#' @examples getContinents(data)
+#' @examples get_continents(curator::obsData)
 #'
 get_continents <- function(data,
                           country = "countryCode"){

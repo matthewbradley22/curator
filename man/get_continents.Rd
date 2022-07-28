@@ -18,6 +18,6 @@ dataset with new continent column
 Create a continent column for a dataset with a countryCode column
 }
 \examples{
-getContinents(data)
+get_continents(obsData)
 
 }
