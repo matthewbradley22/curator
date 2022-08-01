@@ -28,6 +28,7 @@
                                    datLatitude){
   species <- ECD[ECD[[ECDspecies]] == unique(data[[datSpecies]]),]
   species <- species[species[[ECDContinent]] == unique(data[[datContinent]]),]
+  species <- species[!is.na(species$species), ]
   if(nrow(species > 0)){
     meanLong = mean(species[[ECDlongitude]], na.rm = T)
     meanLat = mean(species[[ECDlatitude]], na.rm = T)
