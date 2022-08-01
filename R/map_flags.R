@@ -66,9 +66,59 @@ map_flags <- function(data,
 
   map = leaflet::leaflet(df)
   map = leaflet::addCircleMarkers(map, color = ~pal(flags),
-                                   fillOpacity = 1,
+                                   fillOpacity = 0.5,
                                    label = ~df$flags,
                                    radius = 3)
   map = leaflet::addTiles(map)
   print(map)
 }
+
+
+#' Function to map ECD observations and new data observations
+#'
+#' @param data
+#' @param ECD
+#' @param datLongitude
+#' @param datLatitude
+#' @param ECDLongitude
+#' @param ECDLatitude
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#'
+#'
+map_obs_and_ECD <- function(data,
+                            ECD,
+                      datLongitude = "decimalLongitude",
+                      datLatitude = "decimalLatitude",
+                      ECDLongitude = "decimalLongitude",
+                      ECDLatitude = "decimalLatitude"
+                      ){
+
+  data$type = 'obs'
+  ECD$type = 'ECD'
+
+  df <- rbind(data[c(datLongitude, datLatitude, "type")],
+        ECD[c(ECDLongitude, ECDLatitude, 'type')])
+
+  colnames(df) = c("Longitude", "Latitude", "type")
+  df[,1] = as.numeric(df[,1])
+  df[,2] = as.numeric(df[,2])
+
+  pal <- leaflet::colorFactor(
+    palette = c("orange", "blue"),
+    domain = df$sum)
+
+  map = leaflet::leaflet(df)
+  map = leaflet::addCircleMarkers(map, color = ~pal(type),
+                                  fillOpacity = 0.5,
+                                  label = ~df$type,
+                                  radius = 3)
+  map = leaflet::addTiles(map)
+  print(map)
+}
+
+
+
