@@ -14,9 +14,7 @@
 #' @param datLat Latitude column name in new dataset
 #'
 #' @return dataset of the same class passed to it. New column of convex hull flags.
-#' @export
 #'
-#' @examples
 #'
 .check_convex_hull_helper <- function(data,
                                       ECD,
@@ -63,6 +61,7 @@
 #' @export
 #'
 #' @examples
+#' check_convex_hull(obsData, ECD)
 check_convex_hull <- function(data,
                               ECD,
                               ECDContinent = "continent",

@@ -3,9 +3,6 @@
 #' @param data dataset passed from flags_for_map
 #'
 #' @return
-#' @export
-#'
-#' @examples
 #'
 .map_helper <- function(data){
   flagName <- names(data[which((data) == FALSE)])

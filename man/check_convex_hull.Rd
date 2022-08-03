@@ -46,3 +46,6 @@ dataset of the same class passed to it. New column of convex hull flags.
 Function to check if observations of specific species are within a convex hull
 of species on the same continent
 }
+\examples{
+check_convex_hull(obsData, ECD)
+}

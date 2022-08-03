@@ -10,9 +10,6 @@
 #' @param datCountry Country column name in dataset with observations
 #'
 #' @return dataset of the same class passed to it. New column of country flags
-#' @export
-#'
-#' @examples
 #'
 .flag_countries_helper <- function(data,
                                    ECD,
@@ -45,7 +42,7 @@
 }
 
 
-#' Title
+#' FLags occurence if species is in a country it does not occur in in ECD
 #'
 #' @param data dataset with observations
 #' @param ECD Expert curated dataset
@@ -58,6 +55,7 @@
 #' @export
 #'
 #' @examples
+#' flag_countries(obsData, ECD)
 #'
 flag_countries <- function(data,
                            ECD,
