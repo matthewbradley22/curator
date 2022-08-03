@@ -13,3 +13,18 @@ rm_flag_data <- function(data,
   newDat = data[data[[sumName]] == T,]
   return(newDat)
 }
+
+
+#' Function to combine new data and ECD into one dataframe
+#'
+#' @param data dataset with new occurence data
+#' @param ECD Expert curated dataset
+#'
+#' @return
+#' @export
+#'
+#' @examples
+combine <- function(data,
+                    ECD){
+
+}
