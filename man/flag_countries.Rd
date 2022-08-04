@@ -2,7 +2,7 @@
 % Please edit documentation in R/country_flags.R
 \name{flag_countries}
 \alias{flag_countries}
-\title{Title}
+\title{FLags occurence if species is in a country it does not occur in in ECD}
 \usage{
 flag_countries(
   data,
@@ -30,5 +30,9 @@ flag_countries(
 dataset of the same class passed to it. New column of country flags
 }
 \description{
-Title
+FLags occurence if species is in a country it does not occur in in ECD
+}
+\examples{
+flag_countries(obsData, ECD)
+
 }
