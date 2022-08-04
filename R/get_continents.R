@@ -9,9 +9,10 @@
 #' @examples get_continents(curator::obsData)
 #'
 get_continents <- function(data,
-                          country = "countryCode"){
+                          country = "countryCode",
+                          original = "iso3c"){
   data_continent <- countrycode::countrycode(sourcevar = data[[country]],
-                                origin = "iso3c",
+                                origin = original,
                                 destination = "continent")
   return(data_continent)
 }

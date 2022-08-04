@@ -4,7 +4,7 @@
 \alias{get_continents}
 \title{Create a continent column for a dataset with a countryCode column}
 \usage{
-get_continents(data, country = "countryCode")
+get_continents(data, country = "countryCode", original = "iso3c")
 }
 \arguments{
 \item{data}{dataset with observations}
