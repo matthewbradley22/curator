@@ -1,23 +1,3 @@
-#' Title
-#'
-#' @param startingYear
-#' @param taxKey
-#'
-#' @return
-#' @export
-#'
-#' @examples
-#'
-num_obs <- function(startingYear,
-                    taxKey){
-
-  total = rgbif::occ_count(year = startingYear, taxonKey = taxKey)
-  return(total)
-
-}
-
-
-
 #' retrieve records from gbif, wrapper around occ_search
 #'
 #' @param startingMonth Starting month of starting year for retrieving data
@@ -37,17 +17,12 @@ occ_since <- function(startingMonth = 6,
                                    name = NULL,
                                    taxKey = 2721893,
                                    genKey = NULL,
-                                   numObs = NULL,
+                                   numObs = 1000000,
                                    coordinate = TRUE){
 
   curYear = format(Sys.Date(), "%Y")
   rangeYears = paste(startingYear, curYear, sep = ", ")
 
-  if(is.null(numObs)){
-    numObs = Reduce("+", lapply(X = seq(startingYear, curYear),
-                                num_obs,
-                                taxKey = taxKey))
-  }
   search = rgbif::occ_search(scientificName = name,
                       year = rangeYears,
                       limit = numObs,

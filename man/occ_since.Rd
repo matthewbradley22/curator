@@ -10,7 +10,7 @@ occ_since(
   name = NULL,
   taxKey = 2721893,
   genKey = NULL,
-  numObs = NULL,
+  numObs = 1e+06,
   coordinate = TRUE
 )
 }
