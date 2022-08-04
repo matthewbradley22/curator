@@ -2,9 +2,9 @@
 
 export(.distance_flags_helper)
 export(change_flagged_names)
-export(check_convex_hull)
 export(combine)
 export(distance_flags)
+export(flag_convex_hull)
 export(flag_countries)
 export(flag_data)
 export(flag_names)

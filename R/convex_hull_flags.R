@@ -16,7 +16,7 @@
 #' @return dataset of the same class passed to it. New column of convex hull flags.
 #'
 #'
-.check_convex_hull_helper <- function(data,
+.flag_convex_hull_helper <- function(data,
                                       ECD,
                                       ECDContinent,
                                       datContinent,
@@ -62,7 +62,7 @@
 #'
 #' @examples
 #' check_convex_hull(obsData, ECD)
-check_convex_hull <- function(data,
+flag_convex_hull <- function(data,
                               ECD,
                               ECDContinent = "continent",
                               datContinent = "continent",
