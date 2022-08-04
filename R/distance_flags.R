@@ -16,7 +16,7 @@
 #' @export
 #'
 #' @examples
-.distance_flags_helper <- function(data,
+.flag_distance_helper <- function(data,
                                    ECD,
                                    ECDContinent,
                                    datContinent,
@@ -67,7 +67,7 @@
 #' @export
 #'
 #' @examples
-distance_flags <- function(data,
+flag_distance <- function(data,
                            ECD,
                            ECDContinent = "continent",
                            datContinent = "continent",
@@ -78,7 +78,7 @@ distance_flags <- function(data,
                            datLongitude = "decimalLongitude",
                            datLatitude = "decimalLatitude"){
   distance_data <-  split(data, list(data[[datContinent]], data[[datSpecies]]), drop = TRUE)
-  updated_distance_data <- lapply(distance_data, .distance_flags_helper,
+  updated_distance_data <- lapply(distance_data, .flag_distance_helper,
                                   ECD = ECD,
                                   ECDContinent = ECDContinent,
                                   datContinent = datContinent,

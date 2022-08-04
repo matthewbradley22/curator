@@ -75,7 +75,7 @@ flag_convex_hull <- function(data,
 
   continent_data <- split(data, list(data[[datContinent]], data[[datSpecies]]), drop = TRUE)
   ECD <- ECD[!is.na(ECD[[ECDContinent]]),]
-  updated_continent_data <- lapply(continent_data, .check_convex_hull_helper,
+  updated_continent_data <- lapply(continent_data, .flag_convex_hull_helper,
                                    ECD = ECD,
                                    ECDContinent = ECDContinent,
                                    datContinent = datContinent,
