@@ -31,7 +31,7 @@
   conECD <- conECD[conECD[[ECDspecies]] == unique(data[[datSpecies]]),]
   conECD <- conECD[!is.na(conECD[[1]]),]
   #>3 because convex hull cannot work with only 2 observations
-  if(dim(conECD)[[1]] > 3 & dim(conECD)[[2]] > 0){
+  if(dim(conECD)[[1]] > 3 && dim(conECD)[[2]] > 0){
     #Flag data and ECD have opposite order of longitude latitude
     convexHull <- geometry::convhulln(cbind(conECD[[ECDlon]], conECD[[ECDlat]]))
     pointsInHull <- geometry::inhulln(convexHull, data.matrix(cbind(data[[datLon]], data[[datLat]])))
@@ -73,6 +73,7 @@ flag_convex_hull <- function(data,
                               datLon = "decimalLongitude",
                               datLat = "decimalLatitude"){
 
+  data = data[!is.na(data$continent),]
   continent_data <- split(data, list(data[[datContinent]], data[[datSpecies]]), drop = TRUE)
   ECD <- ECD[!is.na(ECD[[ECDContinent]]),]
   updated_continent_data <- lapply(continent_data, .flag_convex_hull_helper,
