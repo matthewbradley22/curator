@@ -11,6 +11,9 @@ combine(data, ECD)
 
 \item{ECD}{Expert curated dataset}
 }
+\value{
+dataframe
+}
 \description{
 Function to combine new data and ECD into one dataframe
 }

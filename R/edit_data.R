@@ -20,11 +20,15 @@ rm_flag_data <- function(data,
 #' @param data dataset with new occurence data
 #' @param ECD Expert curated dataset
 #'
-#' @return
+#' @return dataframe
 #' @export
 #'
 #' @examples
 combine <- function(data,
                     ECD){
+  data[setdiff(names(ECD), names(data))] <- NA
+  ECD[setdiff(names(data), names(ECD))] <- NA
+  allDat = rbind(ECD, data)
+  return(allDat)
 
 }
