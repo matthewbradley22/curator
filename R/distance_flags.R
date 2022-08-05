@@ -13,9 +13,8 @@
 #' @param datLatitude latitude column name in new dataset
 #'
 #' @return dataset of the same class passed to it. New column of distance flags
-#' @export
 #'
-#' @examples
+#'
 .flag_distance_helper <- function(data,
                                    ECD,
                                    ECDContinent,
@@ -67,6 +66,8 @@
 #' @export
 #'
 #' @examples
+#' flag_distance(obsData, ECD)
+#'
 flag_distance <- function(data,
                            ECD,
                            ECDContinent = "continent",

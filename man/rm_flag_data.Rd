@@ -17,3 +17,7 @@ dataset of the same type passed to it, but with all flagged data removed
 \description{
 Remove any flagged data from dataset
 }
+\examples{
+rm_flag_data(obsData)
+
+}

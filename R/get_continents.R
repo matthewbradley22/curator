@@ -2,11 +2,13 @@
 #'
 #' @param data dataset with observations
 #' @param country column name of column with country codes
+#' @param original type of data in the source column which contains cuntries to identify continent from
 #'
 #' @return dataset of same type that was passed to it. One column of continents.
 #' @export
 #'
-#' @examples get_continents(curator::obsData)
+#' @examples
+#' get_continents(obsData)
 #'
 get_continents <- function(data,
                           country = "countryCode",

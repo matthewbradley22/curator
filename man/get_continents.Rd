@@ -10,6 +10,8 @@ get_continents(data, country = "countryCode", original = "iso3c")
 \item{data}{dataset with observations}
 
 \item{country}{column name of column with country codes}
+
+\item{original}{type of data in the source column which contains cuntries to identify continent from}
 }
 \value{
 dataset of same type that was passed to it. One column of continents.
@@ -18,6 +20,6 @@ dataset of same type that was passed to it. One column of continents.
 Create a continent column for a dataset with a countryCode column
 }
 \examples{
-get_continents(curator::obsData)
+get_continents(obsData)
 
 }

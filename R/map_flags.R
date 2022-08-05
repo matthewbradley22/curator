@@ -2,7 +2,7 @@
 #'
 #' @param data dataset passed from flags_for_map
 #'
-#' @return
+#' @return Returns a string indicating whether the observation has no flags, two flags, or which single flag
 #'
 .map_helper <- function(data){
   flagName <- names(data[which((data) == FALSE)])
@@ -42,7 +42,7 @@ flags_for_map <- function(data,
 #' @param latitude latitude column name
 #' @param plotValues column that indicates flag state of occurence
 #'
-#' @return
+#' @return No return value: plots a leaflet map
 #' @export
 #'
 #' @examples
@@ -73,17 +73,18 @@ map_flags <- function(data,
 
 #' Function to map ECD observations and new data observations
 #'
-#' @param data
-#' @param ECD
-#' @param datLongitude
-#' @param datLatitude
-#' @param ECDLongitude
-#' @param ECDLatitude
+#' @param data new data for plotting
+#' @param ECD Expert curated data set for plotting
+#' @param datLongitude New data column name of column that contains longitude coordinates
+#' @param datLatitude New data column name of column that contains latitude coordinates
+#' @param ECDLongitude ECD column name of column that contains longitude coordinates
+#' @param ECDLatitude ECD column name of column that contains latitude coordinates
 #'
-#' @return
+#' @return No return value: plots a leaflet map
 #' @export
 #'
 #' @examples
+#' map_obs_and_ECD(obsData, ECD)
 #'
 #'
 map_obs_and_ECD <- function(data,
@@ -96,6 +97,7 @@ map_obs_and_ECD <- function(data,
 
   data$type = 'obs'
   ECD$type = 'ECD'
+  ECD <- ECD[ECD$species %in% data$species,]
 
   df <- rbind(data[c(datLongitude, datLatitude, "type")],
         ECD[c(ECDLongitude, ECDLatitude, 'type')])

@@ -61,7 +61,7 @@
 #' @export
 #'
 #' @examples
-#' check_convex_hull(obsData, ECD)
+#' flag_convex_hull(obsData, ECD)
 flag_convex_hull <- function(data,
                               ECD,
                               ECDContinent = "continent",

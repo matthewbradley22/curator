@@ -47,5 +47,5 @@ Function to check if observations of specific species are within a convex hull
 of species on the same continent
 }
 \examples{
-check_convex_hull(obsData, ECD)
+flag_convex_hull(obsData, ECD)
 }

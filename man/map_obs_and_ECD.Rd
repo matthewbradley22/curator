@@ -14,8 +14,26 @@ map_obs_and_ECD(
 )
 }
 \arguments{
-\item{ECDLatitude}{}
+\item{data}{new data for plotting}
+
+\item{ECD}{Expert curated data set for plotting}
+
+\item{datLongitude}{New data column name of column that contains longitude coordinates}
+
+\item{datLatitude}{New data column name of column that contains latitude coordinates}
+
+\item{ECDLongitude}{ECD column name of column that contains longitude coordinates}
+
+\item{ECDLatitude}{ECD column name of column that contains latitude coordinates}
+}
+\value{
+No return value: plots a leaflet map
 }
 \description{
 Function to map ECD observations and new data observations
+}
+\examples{
+map_obs_and_ECD(obsData, ECD)
+
+
 }

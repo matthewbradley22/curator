@@ -20,6 +20,9 @@ map_flags(
 
 \item{plotValues}{column that indicates flag state of occurence}
 }
+\value{
+No return value: plots a leaflet map
+}
 \description{
 Title
 }

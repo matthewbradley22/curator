@@ -44,3 +44,7 @@ dataset of the same class passed to it. New column of distance flags
 \description{
 Flags species occurences that are over a certain distance from the center of the species distribution
 }
+\examples{
+flag_distance(obsData, ECD)
+
+}

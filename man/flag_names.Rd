@@ -21,3 +21,7 @@ dataset of the same class passed to it. New column of name flags
 \description{
 Flag species names in the new dataset that do not occur in the ECD
 }
+\examples{
+flag_names(obsData, ECD)
+
+}

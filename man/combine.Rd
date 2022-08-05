@@ -17,3 +17,7 @@ dataframe
 \description{
 Function to combine new data and ECD into one dataframe
 }
+\examples{
+combine(obsData, ECD)
+
+}

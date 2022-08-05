@@ -9,6 +9,8 @@
 #' @export
 #'
 #' @examples
+#' flag_names(obsData, ECD)
+#'
 flag_names = function(data,
                       ECD,
                       datSpecies = "species",
@@ -30,6 +32,9 @@ flag_names = function(data,
 #' @export
 #'
 #' @examples
+#' dat = flag_names(obsData, ECD)
+#' change_flagged_names(dat)
+#'
 change_flagged_names <- function(data,
                                  names = ".name",
                                  species = "species"){

@@ -7,6 +7,7 @@
 #' @export
 #'
 #' @examples
+#' rm_flag_data(obsData)
 #'
 rm_flag_data <- function(data,
                          sumName = ".summary"){
@@ -24,6 +25,8 @@ rm_flag_data <- function(data,
 #' @export
 #'
 #' @examples
+#' combine(obsData, ECD)
+#'
 combine <- function(data,
                     ECD){
   data[setdiff(names(ECD), names(data))] <- NA

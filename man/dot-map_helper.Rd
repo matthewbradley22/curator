@@ -9,6 +9,9 @@
 \arguments{
 \item{data}{dataset passed from flags_for_map}
 }
+\value{
+Returns a string indicating whether the observation has no flags, two flags, or which single flag
+}
 \description{
 Helper function to map occurences
 }

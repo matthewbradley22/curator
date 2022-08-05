@@ -19,3 +19,8 @@ dataset of the same class passed to it. Problematic names changed if possible.
 \description{
 Title
 }
+\examples{
+dat = flag_names(obsData, ECD)
+change_flagged_names(dat)
+
+}
