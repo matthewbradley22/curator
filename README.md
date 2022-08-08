@@ -1,12 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# curator
+# curatoR
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of curator is to provide an accessible way for biologists to
+The goal of curatoR is to provide an accessible way for biologists to
 curate biological datasets. Specifically, the package provides functions
 to flag suspicious observations based on location, name, and species. It
 also provides an easy way to map observations.
@@ -21,6 +21,11 @@ You can install the development version of curator from
 devtools::install_github("matthewbradley22/curator")
 ```
 
+## Documentation:
+
+For an in depth example of the curatoR package, visit
+<https://matthewbradley22.github.io/>
+
 ## Example
 
 This is a basic example of retriving data from gbif, flagging it with
@@ -31,7 +36,7 @@ not occur in the example ECD provided in the package.
 library(curator)
 
 #Retrieve data with rgbig::occ_search and pass to CoordinateCleaner::clean_coordinates
-data = get_records_since_date(numObs = 500)
+data = occ_since(numObs = 500)
 flags = flag_data(data)
 ```
 
