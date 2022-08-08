@@ -63,5 +63,24 @@ head(flagged$continent)
 
 ### Flagging Countries:
 
-The next step is to flag any occurrences in which the species is in a country in whcih it does not occur in the ECD. For each of these new flagging steps the user can pass the whole "Flagged" object from above, and can indicate any important column names if they differ from the expected names.
+The next step is to flag any occurrences in which the species is in a country in which it does not occur in the ECD. For each of these new flagging steps the user can pass the whole "Flagged" object from above, and can indicate any column names if they differ from the expected names.
 
+```{r}
+#Can see new .country column in the summary of flagged.
+flagged <- flag_countries(flagged, ECD, ECDcountry = "CountryCode")
+summary(flagged)
+
+#We can see which species-nations combiantions are causing these flags
+unique(flagged[flagged$.country == F,][c("species", "countryCode")])
+```
+
+### Flagging Convex Hulls:
+
+Next, for each species-continent combination, we can build a convex hull (a species on 3 different continents will have 3 separate convex hulls) and flag species that occur outside of these convex hulls.
+
+```{r}
+
+flagged <- flag_convex_hull(flagged, ECD)
+summary(flagged)
+
+```
