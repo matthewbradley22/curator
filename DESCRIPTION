@@ -23,3 +23,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/matthewbradley22/curator
+BugReports: https://github.com/matthewbradley22/curator/issues
