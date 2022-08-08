@@ -1,5 +1,5 @@
 ---
-title: "Introductin to curator"
+title: "Introduction to curator"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to curator}
@@ -20,7 +20,48 @@ library(curator)
 
 ## Overview:
 
-curator was designed to create an easily usable pipeline to pull biological data from the Global Biodiversity Information Facility (gbif), use the already available flagging functions from the CoordinateCleaner package, add new flagging functions focused on using an expert curated dataset, and dynamically mapping the resulting observations and their flags.
+curatoR was designed to help biologists pull data from GBIF and curate it quickly. GBIF data is messy, and manually curating it is time consuming. curatoR allows biologists to use an existing Expert Curated Dataset (ECD) to filter GBIF data and easily update the ECD.
 
+## Workflow
+### Retrieving data:
 
-## Retrieving data:
+The first step of the workflow is done using the "occ_since" function which allows a user to pull GBIF data of a certain taxon since a certain date. This function defaults to pulling all Carex data since June 2021. Note that the function defaults to pulling all data (up to 1,000,000 occurrences) since the date, and this step can be quite slow. 
+
+```{r}
+dat = occ_since(numObs = 1000)
+head(dat)
+```
+
+### Load ECD:
+
+The user should load an ECD dataset into R. For this example I will use an example ECD that comes with curatoR and contains 50,000 Carex observations
+```{r}
+data(ECD)
+head(ECD)
+```
+
+### Initial Flags:
+The first step of cleaning data uses a function that wraps the CoordinateCleaner:clean_coordinates function and creates an object with the original dataframe, as well as new columns that indicate flags. This object will be used for the rest of the workflow.
+
+```{r message=FALSE, warning=FALSE}
+
+flagged <- flag_data(dat)
+summary(flagged)
+
+```
+
+### Label continents:
+
+In the coming flagging functions, it will be necessary to have the continents labeled for each occurrence. Our ECD has a country code column that is named differently than the default, so I specify the name of the column.
+
+```{r}
+flagged$continent <- get_continents(flagged)
+ECD$continent <- get_continents(ECD, country = "CountryCode")
+
+head(flagged$continent)
+```
+
+### Flagging Countries:
+
+The next step is to flag any occurrences in which the species is in a country in whcih it does not occur in the ECD. For each of these new flagging steps the user can pass the whole "Flagged" object from above, and can indicate any important column names if they differ from the expected names.
+
