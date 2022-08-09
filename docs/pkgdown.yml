@@ -1,0 +1,10 @@
+pandoc: '2.18'
+pkgdown: 2.0.6
+pkgdown_sha: ~
+articles:
+  curator: curator.html
+last_built: 2022-08-08T21:05Z
+urls:
+  reference: https://matthewbradley22.github.io/curator/reference
+  article: https://matthewbradley22.github.io/curator/articles
+
