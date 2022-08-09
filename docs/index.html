@@ -61,11 +61,11 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="curator">curator<a class="anchor" aria-label="anchor" href="#curator"></a>
+<div class="page-header"><h1 id="curator">curatoR<a class="anchor" aria-label="anchor" href="#curator"></a>
 </h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of curator is to provide an accessible way for biologists to curate biological datasets. Specifically, the package provides functions to flag suspicious observations based on location, name, and species. It also provides an easy way to map observations.</p>
+<p>The goal of curatoR is to provide an accessible way for biologists to curate biological datasets. Specifically, the package provides functions to flag suspicious observations based on location, name, and species. It also provides an easy way to map observations.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -75,6 +75,11 @@
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"matthewbradley22/curator"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
+<h2 id="documentation">Documentation:<a class="anchor" aria-label="anchor" href="#documentation"></a>
+</h2>
+<p>For an in depth example of the curatoR package, visit <a href="https://matthewbradley22.github.io/" class="external-link uri">https://matthewbradley22.github.io/</a></p>
+</div>
+<div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <p>This is a basic example of retriving data from gbif, flagging it with CoordinateCleaner, and flagging any species names in the data that do not occur in the example ECD provided in the package.</p>
@@ -82,7 +87,7 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/matthewbradley22/curator" class="external-link">curator</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">#Retrieve data with rgbig::occ_search and pass to CoordinateCleaner::clean_coordinates</span></span>
-<span><span class="va">data</span> <span class="op">=</span> <span class="fu">get_records_since_date</span><span class="op">(</span>numObs <span class="op">=</span> <span class="fl">500</span><span class="op">)</span></span>
+<span><span class="va">data</span> <span class="op">=</span> <span class="fu"><a href="reference/occ_since.html">occ_since</a></span><span class="op">(</span>numObs <span class="op">=</span> <span class="fl">500</span><span class="op">)</span></span>
 <span><span class="va">flags</span> <span class="op">=</span> <span class="fu"><a href="reference/flag_data.html">flag_data</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#Flag names that do not occur in ECD</span></span>
