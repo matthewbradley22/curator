@@ -56,5 +56,5 @@ summary(flags)
 
 ## Example dynamic map:
 
-[Dynamic map example](https://matthewbradley22.github.io/curator/curatorExample.html){target="_blank"}
+[Dynamic map example](https://matthewbradley22.github.io/curator/curatorExample.html)
 

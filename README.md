@@ -52,5 +52,5 @@ summary(flags)
 
 ## Example dynamic map:
 
-<a href="https://matthewbradley22.github.io/curator/curatorExample.html"
-target="_blank">Dynamic map example</a>
+[Dynamic map
+example](https://matthewbradley22.github.io/curator/curatorExample.html)
