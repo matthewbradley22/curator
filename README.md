@@ -24,7 +24,7 @@ devtools::install_github("matthewbradley22/curator")
 ## Documentation:
 
 For an in depth example of the curatoR package, visit
-<https://matthewbradley22.github.io/>
+<https://matthewbradley22.github.io/curator/>
 
 ## Example
 
