@@ -94,3 +94,13 @@ flagged <- flag_distance(flagged, ECD)
 summary(flagged)
 
 ```
+
+### Flagging Names
+
+The last flag added is for any species names that do not occur in the ECD. These names can then be matched up to an online database in an effort to fix them.
+
+```{r}
+
+
+
+```
