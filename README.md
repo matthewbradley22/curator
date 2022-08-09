@@ -29,8 +29,9 @@ For an in depth example of the curatoR package, visit
 ## Example
 
 This is a basic example of retriving data from gbif, flagging it with
-CoordinateCleaner, and flagging any species names in the data that do
-not occur in the example ECD provided in the package.
+CoordinateCleaner (flag_data), and flagging any species names in the
+data that do not occur in the example ECD provided in the package
+(flag_names).
 
 ``` r
 library(curator)
@@ -39,6 +40,10 @@ library(curator)
 data = occ_since(numObs = 500)
 flags = flag_data(data)
 ```
+
+The column names that begin with a period (seen after summary(flags)
+below) each indicate the number of observations that have a certain
+flag.
 
 ``` r
 #Flag names that do not occur in ECD
@@ -49,6 +54,9 @@ summary(flags)
 #>    .inst .summary    .name 
 #>        0       53        6
 ```
+
+Once flagged we can map this data and color it by presence and type of
+flags, as seen below.
 
 ## Example dynamic map:
 
