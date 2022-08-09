@@ -1,8 +1,8 @@
 ---
-title: "Introduction to curator"
+title: "Introduction to curatoR"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Introduction to curator}
+  %\VignetteIndexEntry{Introduction to curatoR}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
