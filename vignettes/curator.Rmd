@@ -86,3 +86,11 @@ summary(flagged)
 ```
 
 ### Flagging based on distance
+
+Next, for each species-continent combination, we flag occurrences of any species that are over 2 standard deviations from the center of the distribution.
+```{r}
+
+flagged <- flag_distance(flagged, ECD)
+summary(flagged)
+
+```
