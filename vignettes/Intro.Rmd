@@ -112,5 +112,6 @@ summary(flagged)
 #Preparing data for plotting
 flagged <- flags_for_map(flagged)
 map_flags(flagged)
-
 ```
+
+
