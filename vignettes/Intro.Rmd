@@ -95,12 +95,22 @@ summary(flagged)
 
 ```
 
-### Flagging Names
+### Flagging Names:
 
 The last flag added is for any species names that do not occur in the ECD. These names can then be matched up to an online database in an effort to fix them.
 
 ```{r}
 
+flagged <- flag_names(flagged,ECD)
+summary(flagged)
+```
 
+### Plotting Flags:
+
+```{r}
+
+#Preparing data for plotting
+flagged <- flags_for_map(flagged)
+map_flags(flagged)
 
 ```
