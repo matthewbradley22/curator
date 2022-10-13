@@ -2,18 +2,20 @@
 % Please edit documentation in R/intoduced_flags.R
 \name{flag_introduced}
 \alias{flag_introduced}
-\title{Title}
+\title{Flag species labeled as "introduced"}
 \usage{
-flag_introduced(data, introCol = "databaseChanges")
+flag_introduced(data, introCol = "databaseChanges", introTitle = "introduced")
 }
 \arguments{
 \item{data}{dataset}
 
 \item{introCol}{name of column that contains introduced species labels}
+
+\item{introTitle}{Label of introduced species}
 }
 \value{
 dataset of the same class passed to it. New column of introduced flags
 }
 \description{
-Title
+Flag species labeled as "introduced"
 }
